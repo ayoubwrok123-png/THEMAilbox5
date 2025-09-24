@@ -1,0 +1,17 @@
+{
+  "name": "vitara-mail",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace client\" \"cd server && npm run dev\"",
+    "build": "npm run build --workspace client",
+    "start": "node server/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
